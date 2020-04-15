@@ -1,0 +1,27 @@
+{
+  "name": "arduboy-game-manager",
+  "version": "0.1.0",
+  "description": "Manages your Arduboy game library so you can upload them easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msanatan/arduboy-game-manager.git"
+  },
+  "keywords": [
+    "arduboy"
+  ],
+  "author": "Marcus Sanatan <msanatan@gmail.com> (https://msanatan.com)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/msanatan/arduboy-game-manager/issues"
+  },
+  "homepage": "https://github.com/msanatan/arduboy-game-manager#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  }
+}
