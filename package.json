@@ -19,12 +19,12 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "react-start": "react-scripts start",
-    "react-build": "react-scripts build",
-    "react-test": "react-scripts test",
+    "react-start": "rescripts start",
+    "react-build": "rescripts build",
+    "react-test": "rescripts test",
     "react-eject": "react-scripts eject",
-    "build": "react-scripts build && electron-builder",
-    "release": "react-scripts build && electron-builder --publish=always",
+    "build": "rescripts build && electron-builder",
+    "release": "rescripts build && electron-builder --publish=always",
     "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "repository": {
