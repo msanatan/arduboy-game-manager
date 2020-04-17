@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
+import UploadButton from './components/buttons/UploadButton';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       </Navbar>
       <Row className="h-100">
         <Col xs={{ span: 4, offset: 4 }} className="align-self-center">
-          <Button variant="primary" size="lg" block>Upload Hex</Button>
+          <UploadButton label="Hex File" fileType=".hex"/>
         </Col>
       </Row>
     </Container>
