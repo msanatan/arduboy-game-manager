@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Sidebar from './Sidebar';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid className="d-flex flex-column h-100">
+      <Row className="flex-fill">
+        <Col md="4" className="sidebar-container">
+          <Sidebar />
+        </Col>
+        <Col md="8">
+          <p>Game details to come here soon</p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
