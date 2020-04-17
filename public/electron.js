@@ -11,7 +11,7 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 640,
         height: 480,
-        titleBarStyle: 'hidden'
+        titleBarStyle: 'hiddenInset'
     });
     mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
     if (isDev) {
