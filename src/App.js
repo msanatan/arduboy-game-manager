@@ -9,7 +9,7 @@ import './App.css';
 function App() {
   return (
     <Container fluid className="d-flex flex-column h-100 p-0">
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" className="titlebar">
         <Navbar.Brand className="mx-auto">Arduboy Game Manager</Navbar.Brand>
       </Navbar>
       <Row className="h-100">
