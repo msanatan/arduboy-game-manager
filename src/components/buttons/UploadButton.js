@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import AGMModal from '../modal/index';
 
 const fs = window.require('fs').promises;
 const Avrgirl = window.require('avrgirl-arduino');
@@ -29,7 +30,10 @@ class UploadButton extends Component {
         this.state = {
             label: this.props.label,
             inputId: slugify(this.props.label),
-            fileType: this.props.fileType
+            fileType: this.props.fileType,
+            show: false,
+            modalHeading: '',
+            modalDetails: '',
         };
     }
 
@@ -43,28 +47,57 @@ class UploadButton extends Component {
         try {
             let fileContents = await fs.readFile(filePath);
             await flash(fileContents);
+            this.handleShowModal(
+                'Transfer Complete!',
+                'Your Arduboy was flashed successfully'
+            );
         } catch (e) {
             console.error(`could not upload Arduboy file: ${e}`);
+            this.handleShowModal(
+                'Transfer Failed!',
+                'Could not transfer file to your Arduboy. Please verify the file is correct'
+            );
         }
+    }
+
+    handleCloseModal = () => {
+        this.setState({
+            show: false
+        });
+    }
+
+    handleShowModal = (modalHeading, modalDetails) => {
+        this.setState({
+            show: true,
+            modalHeading,
+            modalDetails
+        });
     }
 
     render() {
         return (
-            <Button
-                variant='primary'
-                size='lg'
-                block
-                onClick={this.openFileDialog}>
-                {`Upload ${this.state.label}`}
-                <input
-                    hidden
-                    type='file'
-                    id={this.state.inputId}
-                    name={this.state.inputId}
-                    accept={this.state.fileType}
-                    onChange={this.uploadFile}
-                    className='custom-file-input' />
-            </Button>
+            <>
+                <Button
+                    variant='primary'
+                    size='lg'
+                    block
+                    onClick={this.openFileDialog}>
+                    {`Upload ${this.state.label}`}
+                    <input
+                        hidden
+                        type='file'
+                        id={this.state.inputId}
+                        name={this.state.inputId}
+                        accept={this.state.fileType}
+                        onChange={this.uploadFile}
+                        className='custom-file-input' />
+                </Button>
+                <AGMModal
+                    show={this.state.show}
+                    onHide={this.handleCloseModal}
+                    heading={this.state.modalHeading}
+                    details={this.state.modalDetails} />
+            </>
         );
     }
 }
