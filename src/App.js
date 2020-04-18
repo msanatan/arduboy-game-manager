@@ -8,13 +8,13 @@ import './App.css';
 
 function App() {
   return (
-    <Container fluid className="d-flex flex-column h-100 p-0">
-      <Navbar bg="dark" variant="dark" className="titlebar">
-        <Navbar.Brand className="mx-auto">Arduboy Game Manager</Navbar.Brand>
+    <Container fluid className='d-flex flex-column h-100 p-0'>
+      <Navbar bg='dark' variant='dark' className='titlebar'>
+        <Navbar.Brand className='mx-auto'>Arduboy Game Manager</Navbar.Brand>
       </Navbar>
-      <Row className="h-100">
-        <Col xs={{ span: 4, offset: 4 }} className="align-self-center">
-          <UploadButton label="Hex File" fileType=".hex"/>
+      <Row className='h-100'>
+        <Col xs={{ span: 4, offset: 4 }} className='align-self-center'>
+          <UploadButton label='Hex File' fileType='.hex'/>
         </Col>
       </Row>
     </Container>
