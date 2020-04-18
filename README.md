@@ -1,6 +1,6 @@
 # arduboy-game-manager
 
-Game manager for the Arduboy that works on Mac
+Game manager for the Arduboy (that works on Mac!)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
