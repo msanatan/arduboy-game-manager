@@ -5,7 +5,35 @@
   "private": true,
   "main": "public/electron.js",
   "build": {
-    "appId": "com.msanatan.arduboygamemanager"
+    "productName": "Arduboy Game Manager",
+    "appId": "com.msanatan.arduboygamemanager",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications",
+          "name": "Arduboy Game Manager"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    },
+    "win": {
+      "target": [
+        "squirrel",
+        "msi"
+      ],
+      "icon": "build/icon.ico"
+    }
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
