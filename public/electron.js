@@ -9,8 +9,8 @@ let mainWindow;
 
 function createWindow() {
     mainWindow = new BrowserWindow({
-        width: 640,
-        height: 480,
+        width: 512,
+        height: 384,
         titleBarStyle: 'hiddenInset',
         webPreferences: {
             nodeIntegration: true

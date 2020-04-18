@@ -13,7 +13,7 @@ function App() {
         <Navbar.Brand className='mx-auto'>Arduboy Game Manager</Navbar.Brand>
       </Navbar>
       <Row className='h-100'>
-        <Col xs={{ span: 4, offset: 4 }} className='align-self-center'>
+        <Col xs={{ span: 6, offset: 3 }} className='align-self-center'>
           <UploadButton label='Hex File' fileType='.hex'/>
         </Col>
       </Row>
