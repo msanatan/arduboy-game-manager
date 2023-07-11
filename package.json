@@ -46,7 +46,7 @@
     "react-dom": "^16.13.1",
     "redux": "^4.0.5",
     "react-redux": "^7.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "react-start": "rescripts start",
@@ -92,6 +92,6 @@
     "electron": "^8.2.2",
     "electron-builder": "^22.4.1",
     "redux-devtools": "^3.5.0",
-    "wait-on": "^4.0.2"
+    "wait-on": "^7.0.1"
   }
 }
